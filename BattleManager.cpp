@@ -294,7 +294,7 @@ static Power getDominantPower(Power a, Power b)
 	}
 
 }
-void BattleManager::executeBattle()
+void BattleManager::executeBattle()	 
 {
 	if (_currBattleResult == BattleResult::AttackedPlayerWithoutHeroes)
 	{
@@ -348,15 +348,12 @@ void BattleManager::receiveBattleRezults()
 
 	const BattleStatistics::BattleTimeline* battleTimeline = _battleStatistics.removeStatistics();
 	BattleResult result = battleTimeline->result;
-	int count = Game::getBattleStatistics().getCount();
 	Player* currAttackingPlayer = battleTimeline->attacking;
 	Player* currAttackedPlayer = battleTimeline->attacked;
 	const SuperHero* currHeroToPlayWith = battleTimeline->heroToPlayWith;
 	const SuperHero* currHeroToAttack = battleTimeline->heroToAttack;
-	unsigned newPointsAttacker;
-	unsigned newPointsAttacked;
-	newPointsAttacker = _battleStatistics.removeNewPointsAttacker();
-	newPointsAttacked = _battleStatistics.removeNewPointsAttacked();
+	unsigned newPointsAttacker = _battleStatistics.removeNewPointsAttacker();
+	unsigned newPointsAttacked = _battleStatistics.removeNewPointsAttacked();
 
 	switch (result)
 	{
@@ -574,6 +571,7 @@ void BattleManager::receiveBattleRezults()
 	_playerToAttack = nullptr;
 	_heroToAttack = nullptr;
 	_heroToPlayWith = nullptr;
+	_currBattleResult = BattleResult::Undefined;
 	delete battleTimeline;
 }
 

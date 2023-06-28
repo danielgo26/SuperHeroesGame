@@ -156,7 +156,7 @@ void Player::getHeroesData() const
 }
 void Player::getRestrictedData() const
 {
-	std::cout << "Player " << getUsername() << " :" << std::endl;
+	std::cout << "Player " << getUsername() << std::endl;
 	std::cout << "Balance: " << getMoney() << "$" << std::endl;
 	std::cout << "Heroes owned" << "(" << _heroes.size() << "):" << std::endl;
 	std::cout << "---------------------------------------" << std::endl;

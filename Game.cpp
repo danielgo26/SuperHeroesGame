@@ -353,7 +353,7 @@ void Game::setPlayerToAttack(const MyString& username, unsigned loggedPlayerId)
 	{
 		if (BattleManager::getPlayersInBattle()[i]->getId() == player->getId())
 		{
-			BattleManager::setPlayerToAttack(&_players[i]);
+			BattleManager::setPlayerToAttack(&_players[Game::getPlayerIndexById(player->getId())]);
 			return;
 		}
 	}

@@ -34,8 +34,8 @@ void StartUpCommand::execute()
 		//Game::addPlayer("a", "a", "a", "a", "1Aa");//1
 		//Game::addPlayer("b", "b", "b", "b", "2Bb");//2
 		//Game::addPlayer("c", "c", "c", "c", "3Cc");//2
-		//Game::addHero("op", "op", "obelisk", Power::earth, 100, 10);//0
-		//Game::addHero("op2", "op2", "obelisk2", Power::earth, 100, 10);//1
+		//Game::addHero("op", "op", "obelisk", Power::fire, 100, 100);//0
+		//Game::addHero("op2", "op2", "amon ra", Power::earth, 100, 100);//1
 		//Game::addHero("op3", "op3", "obelisk3", Power::earth, 100, 10);//2
 		//Game::addHero("op4", "op4", "obelisk4", Power::earth, 100, 10);//2
 	}
